@@ -1,14 +1,18 @@
-name: Hello World!
+name: Hello Word Workflow
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
-  hello_world_job:
+  hello:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Say hello
-        run: |
-          echo "Hello World!"
+      - name: Print Hello Word
+        run: echo "Hello Word!"
+
+      - name: Print date
+        run: date
+
+      - name: List directory contents
+        run: ls -l
